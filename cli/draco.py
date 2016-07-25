@@ -1,8 +1,10 @@
 import argparse
 import version
 
-def dispatch_version(args):
+
+def dispatch_version():
     version.show_version()
+
 
 def main():
     parser = argparse.ArgumentParser(description='Valid arguments for dracoctl')
@@ -10,7 +12,7 @@ def main():
     args = parser.parse_args()
 
     if args.version:
-        dispatch_version(args)
+        dispatch_version()
 
 if __name__ == "__main__":
     main()
